@@ -3,11 +3,9 @@ package com.revature.revagenda;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.revature.revagenda.beans")
 public class RevagendaApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(RevagendaApplication.class, args);
 	}
-
 }
