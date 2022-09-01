@@ -2,6 +2,7 @@ package com.revature.revagenda.beans.controllers;
 
 import com.revature.revagenda.beans.services.UserService;
 import com.revature.revagenda.entities.User;
+import com.revature.revagenda.exceptions.InvalidInputException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -45,7 +46,7 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.ACCEPTED)
-    public void createUser(@RequestBody User user) {
+    public void createUser(@RequestBody User user) throws InvalidInputException {
         service.createUser(user);
     }
 
